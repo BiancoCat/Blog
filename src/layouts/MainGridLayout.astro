@@ -124,3 +124,15 @@ const mainPanelTop = siteConfig.banner.enable
     </div>
 </div>
 </Layout>
+
+<style is:global>
+    /* 当 body 没有 lg:is-home 类时（即非主页），隐藏侧边栏 */
+    body:not(.lg\:is-home) #sidebar {
+        display: none !important;
+    }
+
+    /* 当 body 没有 lg:is-home 类时（即非主页），将主网格调整为单列，并占满宽度 */
+    body:not(.lg\:is-home) #main-grid {
+        grid-template-columns: 100% !important;
+    }
+</style>
