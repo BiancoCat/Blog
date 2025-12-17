@@ -51,10 +51,32 @@ const jsonLd = {
         <div id="post-container" class:list={["card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-full ",
             {}
         ]}>
-            <button onclick="history.back()" class="btn-card rounded-2xl w-fit px-2 h-[2.5rem] flex items-center gap-0 mb-5 onload-animation">
-                <Icon name="material-symbols:arrow-back-rounded" class="text-[2rem] text-[var(--primary)]" />
-                <div class="text-black/75 dark:text-white/75 font-bold">Back</div>
-            </button>
+            <button onclick="goBack()" class="btn-card rounded-2xl w-fit px-2 h-[2.5rem] flex items-center gap-0 mb-5 transition hover:bg-[var(--btn-plain-bg-hover)] active:scale-95">
+            <Icon name="material-symbols:arrow-back-rounded" class="text-[2rem] text-[var(--primary)]" />
+            <div class="text-black/75 dark:text-white/75 font-bold">Back</div>
+        </button>
+
+        <script is:inline>
+            function goBack() {
+                // 获取当前页面的 slug (例如 /posts/my-story -> my-story)
+                // 用于回主页时定位 (如果你实现了第2步的进阶功能)
+                const pathSegments = window.location.pathname.split('/').filter(p => p);
+                const currentSlug = pathSegments[pathSegments.length - 1];
+
+                // 判断 document.referrer (来源页) 是否包含当前网站的域名
+                const isInternal = document.referrer && document.referrer.indexOf(window.location.host) > -1;
+
+                if (isInternal) {
+                    // 如果是站内跳转来的，使用 history.back()，浏览器会自动恢复滚动位置
+                    history.back();
+                } else {
+                    // 如果是直接访问的，强制跳转回主页
+                    // 进阶：加上 hash 锚点 "/#" + currentSlug 可以尝试定位到卡片
+                    window.location.href = "/#" + currentSlug;
+                }
+            }
+        </script>
+
             <!-- word count and reading time -->
             <div class="flex flex-row text-black/30 dark:text-white/30 gap-5 mb-3 transition onload-animation">
                 <div class="flex flex-row items-center">
