@@ -18,6 +18,7 @@ import {
 import { defaultFavicons } from "../constants/icon";
 import type { Favicon } from "../types/config";
 import { pathsEqual, url } from "../utils/url-utils";
+import myBackground from "../assets/images/banner.webp";
 import "katex/dist/katex.css";
 
 interface Props {
@@ -148,10 +149,25 @@ const bannerOffset =
 		<link rel="alternate" type="application/rss+xml" title={profileConfig.name} href={`${Astro.site}rss.xml`}/>
 
 	</head>
-	<body class=" min-h-screen transition " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner}]}
+	<!-- <body class=" min-h-screen transition " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner}]}
 		  data-overlayscrollbars-initialize
 	>
 		<ConfigCarrier></ConfigCarrier>
+		<slot /> -->
+		<body class=" min-h-screen transition " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner}]}
+      	data-overlayscrollbars-initialize
+	>
+		<ConfigCarrier></ConfigCarrier>
+
+		{!enableBanner && (
+			<div class="fixed inset-0 z-[-1]">
+				<img 
+					src={myBackground.src} 
+					alt="background" 
+					class="w-full h-full object-cover" 
+				/>
+				</div>
+		)}
 		<slot />
 
 		<!-- increase the page height during page transition to prevent the scrolling animation from jumping -->

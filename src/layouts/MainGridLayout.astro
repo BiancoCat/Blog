@@ -38,7 +38,7 @@ const hasBannerLink = !!siteConfig.banner.credit.url;
 
 const mainPanelTop = siteConfig.banner.enable
 	? `calc(${BANNER_HEIGHT}vh - ${MAIN_PANEL_OVERLAPS_BANNER_HEIGHT}rem)`
-	: "5.5rem";
+	: "7.5rem";
 ---
 
 <Layout title={title} banner={banner} description={description} lang={lang} setOGTypeArticle={setOGTypeArticle}>
@@ -47,7 +47,7 @@ const mainPanelTop = siteConfig.banner.enable
 <slot slot="head" name="head"></slot>
 <div id="top-row" class="z-50 pointer-events-none relative transition-all duration-700 max-w-[var(--page-width)] px-0 md:px-4 mx-auto" class:list={[""]}>
      <!-- 修改了 top 值以适应新的布局 -->
-    <div id="navbar-wrapper" class="pointer-events-auto sticky top-2 transition-all">
+    <div id="navbar-wrapper" class="pointer-events-auto sticky top-2 mt-2 transition-all">
         <Navbar></Navbar>
     </div>
 </div>
