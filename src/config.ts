@@ -1,5 +1,6 @@
 import type {
 	ExpressiveCodeConfig,
+	GitHubEditConfig,
 	LicenseConfig,
 	NavBarConfig,
 	ProfileConfig,
@@ -92,4 +93,9 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 	// Note: Some styles (such as background color) are being overridden, see the astro.config.mjs file.
 	// Please select a dark theme, as this blog theme currently only supports dark background color
 	theme: "github-dark",
+};
+
+export const gitHubEditConfig: GitHubEditConfig = {
+	enable: true,
+	baseUrl: "https://github.com/BiancoCat/Blog/blob/main/src/content/posts",
 };
