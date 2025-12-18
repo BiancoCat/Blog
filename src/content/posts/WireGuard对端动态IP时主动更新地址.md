@@ -1,7 +1,7 @@
 ---
-title: WireGuard对端动态IP时主动更新地址
+title: WireGuard 对端动态 IP 时主动更新地址
 published: 2025-08-30
-description: 'WireGuard对端如果使用动态IP地址，可以通过定时任务脚本自动更新Endpoint地址，确保连接稳定。'
+description: ''
 image: 'https://picsur.kbxx.cc/i/9524fff0-1cde-48c1-9f94-8230eae91c6e.webp'
 tags: [WireGuard, Linux]
 category: '随记'

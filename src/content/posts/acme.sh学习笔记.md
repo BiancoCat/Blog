@@ -1,7 +1,7 @@
 ---
 title: acme.sh学习笔记
 published: 2025-03-26
-description: 'acme.sh是一个轻量级的工具，用于自动化管理证书的申请和续期。本文记录了acme.sh的安装、配置及使用方法。'
+description: ''
 image: 'https://picsur.kbxx.cc/i/f9e10747-7f6c-4120-b496-a82cc183c939.webp'
 tags: [Linux, SSL证书]
 category: '笔记'

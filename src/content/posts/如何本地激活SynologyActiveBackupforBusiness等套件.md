@@ -1,7 +1,7 @@
 ---
 title: 如何本地激活 Synology Active Backup for Business 等套件
 published: 2025-11-22
-description: '介绍如何在本地激活 Synology Active Backup for Business 等套件，避免联网激活带来的限制。'
+description: ''
 image: 'https://dev.moe/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2025/05/image-1.png.webp'
 tags: [Synology]
 category: '随记'

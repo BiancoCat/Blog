@@ -1,7 +1,7 @@
 ---
 title: Proxmox VE 定制 Debian Cloud 系统镜像与创建虚拟机模板
 published: 2025-12-13
-description: '本文介绍如何为 Proxmox VE 定制 DebianCloud 系统镜像，并创建虚拟机模板，简化虚拟机部署过程。'
+description: ''
 image: 'https://picsur.kbxx.cc/i/c394679b-eb68-46d3-ae96-152d5df2fa25.webp'
 tags: [Linux, ProxmoxVE, Debian]
 category: '笔记'

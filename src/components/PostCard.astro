@@ -38,11 +38,11 @@ const className = Astro.props.class;
 
 const hasCover = image !== undefined && image !== null && image !== "";
 
-const coverWidth = "28%";
+const coverWidth = "40%";
 
 const { remarkPluginFrontmatter } = await entry.render();
 ---
-<div id={entry.slug} class:list={["card-base flex flex-col-reverse md:flex-col w-full rounded-[var(--radius-large)] overflow-hidden relative", className]} style={style}>
+<div id={entry.slug} class:list={["card-base flex flex-col-reverse md:flex-col w-full rounded-[var(--radius-large)] overflow-hidden relative", "md:h-[260px]", className]} style={style}>
     <div class:list={["pl-6 md:pl-9 pr-6 md:pr-2 pt-6 md:pt-7 pb-6 relative", {"w-full md:w-[calc(100%_-_52px_-_12px)]": !hasCover, "w-full md:w-[calc(100%_-_var(--coverWidth)_-_12px)]": hasCover}]}>
         <a href={url}
            class="transition group w-full block font-bold mb-3 text-3xl text-90
@@ -60,7 +60,7 @@ const { remarkPluginFrontmatter } = await entry.render();
         <PostMetadata published={published} updated={updated} tags={tags} category={category} hideTagsForMobile={true} hideUpdateDate={true} class="mb-4"></PostMetadata>
 
         <!-- description -->
-        <div class:list={["transition text-75 mb-3.5 pr-4", {"line-clamp-2 md:line-clamp-1": !description}]}>
+        <div class:list={["transition text-75 mb-3.5 pr-4 line-clamp-2 break-all"]}>
             { description || remarkPluginFrontmatter.excerpt }
         </div>
 

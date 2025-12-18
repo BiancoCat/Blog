@@ -1,7 +1,7 @@
 ---
 title: OpenWrt系统打包
 published: 2025-04-17
-description: '今天终于把自己折腾炸了的旁路由修好了，但是为了防止自己手贱，完决定把部署好的 OpenWrt 打包成 img 镜像备份，下次炸了就可以一键还原。'
+description: ''
 image: 'https://picsur.kbxx.cc/i/c7b2681d-3c38-4207-a30b-d34de3d02c50.webp'
 tags: [OpenWrt, Linux]
 category: '笔记'

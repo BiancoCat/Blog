@@ -1,7 +1,7 @@
 ---
 title: Homebrew常用命令
 published: 2025-03-27
-description: '本文总结了Homebrew的常用命令，帮助用户更高效地管理macOS上的软件包。'
+description: ''
 image: 'https://picsur.kbxx.cc/i/ab3679bb-cb31-4bcf-8a8f-d51c633871ec.webp'
 tags: [macOS, Homebrew]
 category: '笔记'
