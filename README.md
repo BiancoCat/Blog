@@ -1,10 +1,8 @@
 # Fuwari for Bianco
 
-基于 [🍥Fuwari](https://github.com/saicaca/fuwari) 魔改开发的自用博客。
+## 基于 [🍥Fuwari](https://github.com/saicaca/fuwari) 魔改开发的自用博客。
 
-[**🖥️源项目在线预览（Vercel）**](https://fuwari.vercel.app)
-
-![Preview Image](https://raw.githubusercontent.com/saicaca/resource/main/fuwari/home.png)
+![Preview Image](./home.png)
 
 ## ✨ 功能特性
 
@@ -13,7 +11,7 @@
 - [x] 亮色 / 暗色模式
 - [x] 自定义主题色和横幅图片
 - [x] 响应式设计
-- [ ] 评论
+- [x] 评论
 - [x] 搜索
 - [x] 文内目录
 
