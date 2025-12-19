@@ -13,10 +13,71 @@ const currentYear = new Date().getFullYear();
     <div class="transition text-50 text-sm text-center">
         &copy; <span id="copyright-year">{currentYear}</span> {profileConfig.name}. All Rights Reserved. /
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('rss.xml')}>RSS</a> /
-        <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('sitemap-index.xml')}>Sitemap</a><br>
+        <!-- <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('sitemap-index.xml')}>Sitemap</a> -->
+        <br>
         Powered by
-        <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://astro.build">Astro</a> &
+        <!-- <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://astro.build">Astro</a> & -->
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://github.com/BiancoCat/Blog">Fuwari for bianco</a><br>
         <a href="https://beian.miit.gov.cn/" target="_blank">陕ICP备2025063044号</a>
+        <br>
+        <!--网站运行时间-->
+        <span id="sitetime" class="color-change"></span>
+        <script>
+            (function siteTime(){
+                try {
+                    setTimeout(siteTime, 1000);
+
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+
+                    var today = new Date();
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth(); // 修正：getMonth() 返回 0-11
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+
+                    var t1 = Date.UTC(2025, 3, 26, 0, 0, 0); /*这里修改为建站时间（注意：月份从0开始，0=一月）*/
+                    var t2 = Date.UTC(
+                        todayYear,
+                        todayMonth,
+                        todayDate,
+                        todayHour,
+                        todayMinute,
+                        todaySecond,
+                    );
+
+                    var diff = t2 - t1;
+
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor(diff / days - diffYears * 365);
+                    var diffHours = Math.floor(
+                        (diff - (diffYears * 365 + diffDays) * days) / hours,
+                    );
+                    var diffMinutes = Math.floor(
+                        (diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes,
+                    );
+                    var diffSeconds = Math.floor(
+                        (diff -
+                            (diffYears * 365 + diffDays) * days -
+                            diffHours * hours -
+                            diffMinutes * minutes) /
+                            seconds,
+                    );
+
+                    var el = document.getElementById("sitetime");
+                    if (el) {
+                        el.innerText = ` 本站已运行 ${diffYears} 年 ${diffDays} 天 ${diffHours} 小时 ${diffMinutes} 分钟 ${diffSeconds} 秒 `;
+                    }
+                } catch (e) {
+                    // silently fail to avoid breaking the page
+                    console.error('siteTime error', e);
+                }
+            })();
+        </script>
     </div>
 </div>
