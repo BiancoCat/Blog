@@ -133,6 +133,6 @@ const mainPanelTop = siteConfig.banner.enable
 
     /* 当 body 没有 lg:is-home 类时（即非主页），将主网格调整为单列，并占满宽度 */
     body:not(.lg\:is-home) #main-grid {
-        grid-template-columns: 100% !important;
+        grid-template-columns: minmax(0, 1fr) !important;
     }
 </style>
