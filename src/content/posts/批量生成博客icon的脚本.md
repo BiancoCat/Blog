@@ -4,7 +4,7 @@ published: 2025-12-19
 description: ''
 image: ''
 tags: [macOS, shell]
-category: ''
+category: '脚本'
 draft: false 
 lang: ''
 ---

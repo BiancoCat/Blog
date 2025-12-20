@@ -94,10 +94,10 @@ CPU 和内存最小就行，后面可以根据需要调整。
 ![alt text](https://picsur.kbxx.cc/i/df666089-c1c6-40be-bf82-ce0caf8505bf.webp)
 创建完成后，不要启动虚拟机，进入 shell，把定制好的镜像上传到 root 用户根目录，然后转换成虚拟机磁盘格式：
 ```bash
-qm importdisk 100000 /tmp/debian-13-generic-amd64-zc.qcow2 local-lvm --format=qcow2
+qm importdisk 100000 debian-13-generic-amd64-bianco.qcow2 local-lvm --format=qcow2
 ```
 - 100000 是刚才创建的虚拟机 VM ID
-- /tmp/debian-13-generic-amd64-zc.qcow2 是上传的定制镜像路径
+- debian-13-generic-amd64-bianco.qcow2 是上传的定制镜像路径
 - local-lvm 是存储名称，根据实际情况修改
 - --format=qcow2 指定镜像格式
 
