@@ -2,7 +2,7 @@
 title: PVE环境配置Intel核显SR-IOV
 published: 2026-06-09
 description: ''
-image: './image/image1.png'
+image: ''
 tags: [ProxmoxVE, 直通]
 category: '折腾'
 draft: false 
