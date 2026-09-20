@@ -1,6 +1,6 @@
 ---
 title: ROS + Debian 13 + daed 旁路由：国外正常、国内网站无法访问的排障记录
-published: 2025-09-19
+published: 2026-09-19
 description: ''
 image: ''
 tags: [Linux, Debian, Dead]
