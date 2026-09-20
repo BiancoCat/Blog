@@ -1,6 +1,6 @@
 ---
 title: 用 RouterOS 限制 IPv6 出海访问 让海外应用回落 IPv4
-published: 2026-8-22
+published: 2026-09-02
 description: ''
 image: 'https://picsur.kbxx.cc/i/7069d930-eabd-4ee5-b499-a2eccedc9dff.webp'
 tags: [RouterOS]
